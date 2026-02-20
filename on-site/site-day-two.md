@@ -1,5 +1,5 @@
 
-# Day One: Exploring on-site servers
+# Day Two: Gaining access to the second server
 
 Sudo permissions were obtained. As such, I proceeded to logon to the concerto-admin
 account to find a surprise waiting for me: A 20G (and growing) log file that contains
