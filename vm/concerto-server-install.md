@@ -23,13 +23,13 @@ The following dependencies are needed in addition to a minimal ubuntu setup:
 - generate a secret for server auth
 
   ```bash
-  SECRET="$(docker run --rm ghcr.io/concerto/concerto:latest bin/rails secret)"
+  SECRET="$(podman run --rm ghcr.io/concerto/concerto:latest bin/rails secret)"
   ```
 
 - use the secret and the image to create a container
   
   ```bash
-  docker run -d -p localhost:8080:80 -e SECRET_KEY_BASE=$SECRET -v concerto_storage:/rails/storage --cap-add CAP_NET_BIND_SERVICE --name concerto ghcr.io/concerto/concerto:latest
+  podman run -d -p 127.0.0.1:8080:80 -e SECRET_KEY_BASE=$SECRET -v concerto_storage:/rails/storage --cap-add CAP_NET_BIND_SERVICE --name concerto ghcr.io/concerto/concerto:latest
   ```
 
 ## Install nginx https proxy
