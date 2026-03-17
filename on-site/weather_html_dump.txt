@@ -1,0 +1,8 @@
+<h1 Today in Troy </h1>
+<div style='float: left; width: 50%'>
+  <i class='owf owf-501 owf-5x'></i>
+</div>
+<div style='float: left; width: 50%'>
+  <p> Current </p>
+  <h1> 61 \u0026deg;F </h1>
+</div>

@@ -16,4 +16,18 @@ couldn't find a way to access the server since it was listening on only
 `127.0.0.1`.
 
 I'll bind it to `0.0.0.0` instead and hope that the firewall is configured to
-deny traffic to it.
+deny traffic to it. Then I can get Concerto Docker to fetch from `host.containers.internal`
+and succeed.
+
+In completion, I managed to do it! The weather is now fetched by concerto as shown:
+
+![The Concerto weather feed with fetching](../media/concerto_weather_fetching.png)
+
+I also switched around the ticker and the sidebar so that the Amos Eaton feed shows the welcome.
+
+I also figured out that parenthesis was bugging the concerto images and prevented
+them from displaying. However, the backend seems to serve the images just fine so
+the actual problem is just the frontend code.
+
+The weather however is not showing in the actual feed so I [dumped](./weather_html_dump.txt)
+an example of the prior html in an attempt to replicate it.
