@@ -52,6 +52,7 @@ def read_root(lat: float, lon: float, settings: Annotated[Settings, Depends(get_
 <div style='float: left; width: 50%'>
   <p> Current </p>
   <h1> {temp:.1f} &deg;F </h1>
+  <p>{"‎"*100}</p>
 </div>
 """
     return {
