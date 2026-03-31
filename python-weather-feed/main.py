@@ -22,7 +22,7 @@ def kelvin_to_fahrenheit(kelvin: float) -> float:
     return round((kelvin - 273.15) * 9 / 5 + 32)
 
 @app.get("/weather.json")
-def read_root(lat: float, lon: float, settings: Annotated[Settings, Depends(get_settings)]) -> Dict[str, str]:
+def read_root(lat: float, lon: float, settings: Annotated[Settings, Depends(get_settings)]) -> List[ Dict[str, str] ] | Dict[str, str]:
     today = datetime.datetime.now()
     start = today.replace(hour=0, minute=0, second=0, microsecond=0)
     end = today.replace(hour=23, minute=59, second=59, microsecond=999999)
@@ -37,10 +37,11 @@ def read_root(lat: float, lon: float, settings: Annotated[Settings, Depends(get_
     json: dict[str, str | dict[str, float] | List[dict[str, str]]] = response.json()
     if (json.get("main") == None):
         return {"Error": "Response Failed", "info": str(json)}
-    name: str = json.get("name", "Middle of Nowhere")
-    weather_icon_id: str = json.get("weather", [{}])[0].get("id", 801)
+    name = json.get("name", "Middle of Nowhere")
+    weather_icon_id = json.get("weather", [{}])[0].get("id", 801)
 
-    main_section: dict[str, float] = json.get("main", {})
+    main_section = json.get("main", {})
+    main_section: dict[str, float]
     temp: float = main_section.get("temp", 0.00)
     if (temp == 0.00):
         return {"Error": "Something went wrong", "Info": response.text}
@@ -50,17 +51,16 @@ def read_root(lat: float, lon: float, settings: Annotated[Settings, Depends(get_
   <i class='owf owf-{weather_icon_id} owf-5x'></i>
 </div>
 <div style='float: left; width: 50%'>
-  <p> Current </p>
-  <h1> {temp:.1f} &deg;F </h1>
+  <p> Current: {temp:.1f} &deg;F </p>
   <p>{"‎"*100}</p>
 </div>
 """
-    return {
+    return [{
         "name": "Updated Weather",
         "type": "RichText",
         "render_as": "html",
         "start_time": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "end_time": end.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "text": html
-    }
+    }]
 
