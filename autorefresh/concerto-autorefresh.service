@@ -1,0 +1,22 @@
+[Unit]
+Description=Concerto Auto Refresh Script
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/autorefresh
+
+# Use venv Python directly
+ExecStart=%h/autorefresh/.venv/bin/python %h/autorefresh/autorefresh.py
+
+Restart=always
+RestartSec=10
+
+# Optional (only if you want systemd to also load env vars)
+EnvironmentFile=%h/autorefresh/.env
+
+# Ensures venv binaries/libs are preferred
+Environment="PATH=%h/autorefresh/.venv/bin:/usr/bin"
+
+[Install]
+WantedBy=default.target
