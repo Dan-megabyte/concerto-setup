@@ -38,3 +38,5 @@ password, a problem that will probably be solved later).
 
 I also managed to remote into the server via tigervnc to see the actual
 display and how that worked.
+
+[Next Work Summary](./site-day-twelve.md)
