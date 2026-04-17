@@ -15,3 +15,5 @@ RSS feed from spitting out incorrect information, so thats a win.
 
 For today, I'll update the new weather script to include some extraneous
 spaces, and check to see if that works the next day.
+
+[Next Work Summary](./site-day-ten.md)

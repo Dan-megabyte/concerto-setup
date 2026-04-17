@@ -39,3 +39,5 @@ used/created in this process.
 ## Friday plans
 
 On Friday, I'll hopefully document where things are on the server.
+
+[Next Work Summary](./site-day-six.md)

@@ -52,3 +52,5 @@ an actual certificate for the lally server.
 
 I'll then get to migrating the data from the old server (which could still be accessed on port 80)
 to the new server (on port 443 for https).
+
+[Next Work Summary](./site-day-four.md)

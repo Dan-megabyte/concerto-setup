@@ -11,3 +11,5 @@ In addition to that, the log files were combed through (`cat | tail | grep`) and
 of the client was found. Since it was dynamic, it is likely to change over time unless it
 changes to detect its own static IP, but it should be sufficient for the team lead to grant
 me access to the server.
+
+[Next Work Summary](./site-day-three.md)

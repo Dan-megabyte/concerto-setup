@@ -48,3 +48,5 @@ I replaced the previous keys with the new keys and the nginx server started succ
 the first admin account on the new concerto site, I decided that I needed to talk to my project lead about
 the possibility of getting an actual signed certificate from the RPI hostmaster, to dismiss the annoying
 self-signed warnings when attempting to connect to it.
+
+[Next Work Summary](./site-day-five.md)

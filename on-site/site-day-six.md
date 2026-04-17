@@ -37,3 +37,5 @@ The weather service will be running now! Sending a `curl 'http://localhost:43678
 gives html that can be displayed through concerto!
 
 The next day I'll set up the feed onto the concerto server so that it displays.
+
+[Next Work Summary](./site-day-seven.md)

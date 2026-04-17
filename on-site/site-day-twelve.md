@@ -32,3 +32,5 @@ mostly complete! Just a bunch of finishing touches needed.
 - Turn off old server
 - Make frontends restart at midnight.
 - Update???
+
+[Next Work Summary](./site-day-thirteen.md)

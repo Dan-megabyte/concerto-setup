@@ -24,3 +24,5 @@ it still didn't work.
 
 I'll try looking at the backend logs on the server next time and search
 for issues on content fetching. I'll also try to replicate the error locally.
+
+[Next Work Summary](./site-day-nine.md)

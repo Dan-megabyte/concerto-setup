@@ -31,3 +31,5 @@ the actual problem is just the frontend code.
 
 The weather however is not showing in the actual feed so I [dumped](./weather_html_dump.txt)
 an example of the prior html in an attempt to replicate it.
+
+[Next Work Summary](./site-day-eight.md)

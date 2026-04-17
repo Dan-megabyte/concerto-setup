@@ -10,6 +10,9 @@ the Eventhub RSS feed also be autorefreshed.
 
 I also improved the server content documentation in foresight of future
 maintainers, reflecting the changes made throughout the semester.
+I also improved the Concerto-Setup repository layout and finally added
+a README for the purposes of documentation and ease of navigation for
+those future maintainers.
 
 And to those that stuck through the whole journey, I thank you for keeping
 up. I also wish future maintainers luck and happy times with Docker.
